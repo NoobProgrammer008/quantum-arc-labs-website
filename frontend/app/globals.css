@@ -25,12 +25,60 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 } */
+/* 
+  Tailwind Directives:
+  These three lines import Tailwind CSS's base styles, reusable components, 
+  and utility classes into your project.
+  Think of them as layers — base (default resets), components (prebuilt parts), 
+  and utilities (small reusable style rules).
+*/
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Optional: global styles */
+/* 
+  Global Body Styling:
+  - Applies to the whole website's body (the background and default text style).
+  - @apply lets us use Tailwind classes inside normal CSS.
+  - Here we set:
+    • text-gray-800: medium-dark gray for text
+    • bg-white: white background
+    • font-sans: clean, sans-serif font
+*/
 body {
-  background-color: #0f172a; /* Dark slate background */
-  color: white;
+  @apply text-gray-800 bg-white font-sans;
+}
+
+/* 
+  Global Heading Styles:
+  - Applies to all <h1>, <h2>, and <h3> elements.
+  - Makes headings bold and dark to stand out.
+  - font-bold: makes text thicker
+  - text-gray-900: almost black text color for better contrast
+*/
+h1, h2, h3 {
+  @apply font-bold text-gray-900;
+}
+@keyframes blob {
+  0%, 100% { 
+    transform: translate(0, 0) scale(1); 
+  }
+  33% { 
+    transform: translate(40px, -60px) scale(1.15); 
+  }
+  66% { 
+    transform: translate(-30px, 30px) scale(0.9); 
+  }
+}
+
+.animate-blob {
+  animation: blob 8s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
 }
