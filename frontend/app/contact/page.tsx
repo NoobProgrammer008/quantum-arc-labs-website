@@ -59,16 +59,17 @@ export default function ContactForm() {
       value: "quantumarc.labs@gmail.com",
       link: "mailto:quantumarc.labs@gmail.com",
     },
-    {
-      icon: Phone,
-      title: "Phone",
-      value: "+92-3130255401",
-      link: "tel:+923130255401",
-    },
+    // Will make LATER
+    // {
+    //   icon: Phone,
+    //   title: "Phone",
+    //   value: "+92-3130255401",
+    //   link: "tel:+923130255401",
+    // },
     {
       icon: MapPin,
       title: "Office",
-      value: "Karachi, 75200, PK",
+      value: <span>12955 BISCAYNE BLVD STE 200<br />PMB 531<br />MIAMI, FL 33181 UN</span>,
       link: "https://maps.google.com",
     },
   ];

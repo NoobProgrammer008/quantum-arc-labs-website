@@ -284,9 +284,9 @@ import {
   X,
   Code2,
   ArrowRight,
-  Linkedin,
-  Twitter,
-  Github,
+  //Linkedin,
+  //Twitter,
+  //Github,
   Mail,
   Phone,
   MapPin,
@@ -479,7 +479,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 Empowering businesses with cutting-edge software solutions.
                 Transform your ideas into reality with our expert team of innovators.
               </p>
-              <div className="flex gap-4">
+              {/* will add this LATER */}
+              {/* <div className="flex gap-4">
                 {[
                   { icon: Linkedin, link: "#" },
                   { icon: Twitter, link: "#" },
@@ -494,7 +495,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                     <social.icon className="w-5 h-5" />
                   </a>
                 ))}
-              </div>
+              </div> */}
             </div>
 
             {/* Quick Links */}
@@ -521,7 +522,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               </ul>
             </div>
 
-            {/* Contact */}
+{/* Contact */}
             <div>
               <h3 className="font-bold text-lg mb-6 text-white flex items-center gap-2">
                 <span className="w-1.5 h-6 bg-gradient-to-b from-purple-500 to-pink-500 rounded-full"></span>
@@ -533,32 +534,30 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                     <Mail className="w-5 h-5 text-purple-500" /> quantumarc.labs@gmail.com
                   </a>
                 </li>
-                <li>
-                  <a href="tel:+92-3130255401" className="flex items-center gap-3 hover:text-white transition-colors">
-                    <Phone className="w-5 h-5 text-purple-500" /> +92-3130255401
-                  </a>
-                </li>
-                <li className="flex items-center gap-3">
-                  <MapPin className="w-5 h-5 text-purple-500" /> Karachi, PK
+                <li className="flex items-start gap-3">
+                  <MapPin className="w-5 h-5 text-purple-500 mt-1 flex-shrink-0" /> 
+                  <span>12955 BISCAYNE BLVD STE 200<br />PMB 531<br />MIAMI, FL 33181 UN</span>
                 </li>
               </ul>
             </div>
           </div>
+
+          {/* Footer */}
 
           <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-400 text-sm">
               © {new Date().getFullYear()} Quantum Arc Labs. All rights reserved.
             </p>
             <div className="flex gap-6 text-sm">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <Link href="/privacy-policy" className="text-gray-400 hover:text-white transition-colors">
                 Privacy Policy
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              </Link>
+              <Link href="/terms-of-service" className="text-gray-400 hover:text-white transition-colors">
                 Terms of Service
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              </Link>
+              <Link href="/cookie-policy" className="text-gray-400 hover:text-white transition-colors">
                 Cookie Policy
-              </a>
+              </Link>
             </div>
           </div>
         </div>

@@ -40,32 +40,34 @@ export default function About() {
         "We believe in transparent communication and working closely with our clients as true partners.",
     },
   ];
-
-  const team = [
-    {
-      name: "Annas Khan",
-      role: "CEO & Founder",
-      image: "/team-images/mem1.jpg",
-    },
-    {
-      name: "Maqbool Ahmed",
-      role: "Lead Developer & Co-Founder",
-      image: "/team-images/mem2.png",
-    },
-    {
-      name: "Rahim Khan",
-      role: "Head of Sales",
-      image: "/team-images/mem3.jpg",
-    },
-    {
-      name: "Ismail Bajwa",
-      role: "MERN Developer",
-      image: "/team-images/mem4.jpg",
-    },
-  ];
+  // --------------------------------
+  // WILL ADD THIS LATER
+  // --------------------------------
+  // const team = [
+  //   {
+  //     name: "Annas Khan",
+  //     role: "Lead Developer",
+  //     image: "/team-images/mem1.jpg",
+  //   },
+  //   {
+  //     name: "Maqbool Ahmed",
+  //     role: "Lead Developer",
+  //     image: "/team-images/mem2.png",
+  //   },
+  //   {
+  //     name: "Rahim Khan",
+  //     role: "Head of Sales",
+  //     image: "/team-images/mem3.jpg",
+  //   },
+  //   {
+  //     name: "Ismail Bajwa",
+  //     role: "MERN Developer",
+  //     image: "/team-images/mem4.jpg",
+  //   },
+  // ];
 
   const stats = [
-      { icon: Users, value: "5+", label: "Team Members" },
+      { icon: Users, value: "15+", label: "Team Members" },
       { icon: Award, value: "10+", label: "Local Projects Delivered" },
       { icon: TrendingUp, value: "1", label: "Year in Operation" },
       { icon: Target, value: "100%", label: "Dedication to Quality" },
@@ -223,8 +225,10 @@ export default function About() {
           </div>
         </div>
       </section>
-
-      {/* Team Section */}
+  {/* // --------------------------------
+  // WILL ADD THIS LATER
+  // -------------------------------- */}
+      {/* Team Section
       <section className="py-24 bg-gradient-to-br from-gray-50 to-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -258,6 +262,47 @@ export default function About() {
               </Card>
             ))}
           </div>
+        </div>
+      </section> */}.
+      {/* Join Our Team Section */}
+      <section className="relative py-24 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+          <div
+            className="absolute bottom-20 right-10 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"
+            style={{ animationDelay: "1s" }}
+          ></div>
+        </div>
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full mb-8 shadow-lg">
+            <Sparkles className="w-4 h-4 text-purple-600" />
+            <span className="text-sm font-medium text-gray-700">
+              We&apos;re Growing Fast
+            </span>
+          </div>
+
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            Join the{" "}
+            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              Quantum Arc Labs
+            </span>{" "}
+            Journey
+          </h2>
+
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-10">
+            We&apos;re a passionate group of innovators, developers, and designers
+            shaping the future of digital technology. If you love creating,
+            experimenting, and building meaningful solutions — we’d love to hear
+            from you.
+          </p>
+
+          <Link
+            href="/contact"
+            className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-full shadow-lg hover:opacity-90 transition-all"
+          >
+            Let&apos;s Collaborate
+          </Link>
         </div>
       </section>
     </div>
