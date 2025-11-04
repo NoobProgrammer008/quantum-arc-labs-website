@@ -69,7 +69,7 @@ export default function About() {
   const stats = [
       { icon: Users, value: "15+", label: "Team Members" },
       { icon: Award, value: "10+", label: "Local Projects Delivered" },
-      { icon: TrendingUp, value: "1", label: "Year in Operation" },
+      { icon: TrendingUp, value: "5+", label: "Year in Operation" },
       { icon: Target, value: "100%", label: "Dedication to Quality" },
   ];
 

@@ -13,6 +13,7 @@ import {
   Send,
   CheckCircle2,
   Sparkles,
+  AlertCircle,
 } from "lucide-react";
 
 export default function ContactForm() {
@@ -26,23 +27,42 @@ export default function ContactForm() {
 
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState("");
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setError("");
 
-    // Simulate API call or email sending
-    setTimeout(() => {
-      setSubmitted(true);
-      setIsSubmitting(false);
-      setFormData({
-        name: "",
-        email: "",
-        company: "",
-        phone: "",
-        message: "",
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
       });
-    }, 1500);
+
+      const data = await response.json();
+
+      if (data.success) {
+        setSubmitted(true);
+        setFormData({
+          name: "",
+          email: "",
+          company: "",
+          phone: "",
+          message: "",
+        });
+      } else {
+        setError(data.error || "Failed to send message. Please try again.");
+      }
+    } catch (err) {
+      setError("Something went wrong. Please try again later.");
+      console.error("Form submission error:", err);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -59,17 +79,18 @@ export default function ContactForm() {
       value: "quantumarc.labs@gmail.com",
       link: "mailto:quantumarc.labs@gmail.com",
     },
-    // Will make LATER
-    // {
-    //   icon: Phone,
-    //   title: "Phone",
-    //   value: "+92-3130255401",
-    //   link: "tel:+923130255401",
-    // },
     {
       icon: MapPin,
       title: "Office",
-      value: <span>12955 BISCAYNE BLVD STE 200<br />PMB 531<br />MIAMI, FL 33181 UN</span>,
+      value: (
+        <span>
+          12955 BISCAYNE BLVD STE 200
+          <br />
+          PMB 531
+          <br />
+          MIAMI, FL 33181 UN
+        </span>
+      ),
       link: "https://maps.google.com",
     },
   ];
@@ -179,6 +200,19 @@ export default function ContactForm() {
                 <CardContent className="p-8">
                   {!submitted ? (
                     <form onSubmit={handleSubmit} className="space-y-6">
+                      {/* Error Message */}
+                      {error && (
+                        <div className="bg-red-50 border border-red-200 rounded-lg p-4 flex items-start gap-3">
+                          <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
+                          <div>
+                            <h4 className="font-semibold text-red-900 mb-1">
+                              Error
+                            </h4>
+                            <p className="text-red-700 text-sm">{error}</p>
+                          </div>
+                        </div>
+                      )}
+
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div className="space-y-2">
                           <Label htmlFor="name">Full Name *</Label>
@@ -188,7 +222,8 @@ export default function ContactForm() {
                             value={formData.name}
                             onChange={handleChange}
                             required
-                            placeholder="Steve smith"
+                            placeholder="Steve Smith"
+                            disabled={isSubmitting}
                           />
                         </div>
 
@@ -202,6 +237,7 @@ export default function ContactForm() {
                             onChange={handleChange}
                             required
                             placeholder="steve@example.com"
+                            disabled={isSubmitting}
                           />
                         </div>
 
@@ -213,6 +249,7 @@ export default function ContactForm() {
                             value={formData.company}
                             onChange={handleChange}
                             placeholder="Your Company"
+                            disabled={isSubmitting}
                           />
                         </div>
 
@@ -225,6 +262,7 @@ export default function ContactForm() {
                             value={formData.phone}
                             onChange={handleChange}
                             placeholder="+1 (555) 123-4567"
+                            disabled={isSubmitting}
                           />
                         </div>
                       </div>
@@ -239,6 +277,7 @@ export default function ContactForm() {
                           required
                           placeholder="Tell us about your project..."
                           className="min-h-[200px] resize-none"
+                          disabled={isSubmitting}
                         />
                       </div>
 
@@ -249,7 +288,9 @@ export default function ContactForm() {
                         className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white"
                       >
                         {isSubmitting ? (
-                          "Sending..."
+                          <>
+                            <span className="animate-pulse">Sending...</span>
+                          </>
                         ) : (
                           <>
                             Send Message
@@ -267,11 +308,14 @@ export default function ContactForm() {
                         Message Sent Successfully!
                       </h3>
                       <p className="text-gray-600 mb-8">
-                        Thank you for reaching out. We&apos;ll get back to you within
-                        24 hours.
+                        Thank you for reaching out. We&apos;ve sent you a confirmation
+                        email and will get back to you within 24 hours.
                       </p>
                       <Button
-                        onClick={() => setSubmitted(false)}
+                        onClick={() => {
+                          setSubmitted(false);
+                          setError("");
+                        }}
                         variant="outline"
                         size="lg"
                       >
