@@ -119,10 +119,9 @@ export async function POST(req) {
               <ul>
                 <li>Our team will review your inquiry within 24 hours</li>
                 <li>We'll get back to you via email at: <strong>${email}</strong></li>
-                <li>If urgent, feel free to call us directly</li>
               </ul>
               
-              <p>In the meantime, feel free to explore our website to learn more about our services and recent projects.</p>
+              <p>In the meantime, feel free to explore our website to learn more about our services.</p>
               
               <p>Best regards,<br>
               <strong>The Quantum Arc Labs Team</strong></p>
