@@ -521,8 +521,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 ))}
               </ul>
             </div>
-
-{/* Contact */}
+            {/* Contact */}
             <div>
               <h3 className="font-bold text-lg mb-6 text-white flex items-center gap-2">
                 <span className="w-1.5 h-6 bg-gradient-to-b from-purple-500 to-pink-500 rounded-full"></span>
@@ -557,6 +556,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               </Link>
               <Link href="/cookie-policy" className="text-gray-400 hover:text-white transition-colors">
                 Cookie Policy
+              </Link>
+              <Link href="/copyright-policy" className="text-gray-400 hover:text-white transition-colors">
+                Copyright Notice
               </Link>
             </div>
           </div>

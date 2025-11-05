@@ -1,3 +1,5 @@
+"use client";
+import React from "react";
 export default function TermsOfService() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-purple-50 to-slate-50 pt-32 pb-20">
@@ -120,16 +122,9 @@ export default function TermsOfService() {
               </p>
             </section>
 
-            <section>
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">11. Governing Law</h2>
-              <p className="text-gray-700 leading-relaxed">
-                These terms and conditions are governed by and construed in accordance with the laws of Pakistan, and you 
-                irrevocably submit to the exclusive jurisdiction of the courts in that location.
-              </p>
-            </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">12. Changes to Terms</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">11. Changes to Terms</h2>
               <p className="text-gray-700 leading-relaxed">
                 Quantum Arc Labs reserves the right to modify these terms at any time. We will notify users of any material 
                 changes by posting the new Terms of Service on this page and updating the &quot;Last updated&quot; date.
@@ -137,7 +132,7 @@ export default function TermsOfService() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">13. Contact Information</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">12. Contact Information</h2>
               <p className="text-gray-700 leading-relaxed">
                 If you have any questions about these Terms of Service, please contact us:
               </p>

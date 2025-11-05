@@ -1,3 +1,5 @@
+"use client";
+import React from "react";
 export default function CookiePolicy() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-purple-50 to-slate-50 pt-32 pb-20">
