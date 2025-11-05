@@ -1,5 +1,12 @@
-"use client";
+//"use client";
+import { Metadata } from "next";
 import React from "react";
+
+export const metadata: Metadata = {
+  title: 'Terms of Service | Quantum Arc Labs',
+  description: 'Read the terms and conditions for using Quantum Arc Labs website and services.',
+};
+
 export default function TermsOfService() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-purple-50 to-slate-50 pt-32 pb-20">

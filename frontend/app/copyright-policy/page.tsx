@@ -1,7 +1,14 @@
-"use client";
+//"use client";
 import React from "react";
+import { Metadata } from "next";
 import { Card, CardContent } from "../../components/ui/card";
 import { Copyright, AlertTriangle, Shield, Sparkles } from "lucide-react";
+
+
+export const metadata: Metadata = {
+  title: 'Copyright Notice | Quantum Arc Labs',
+  description: 'Copyright and trademark information for Quantum Arc Labs. Learn about our intellectual property protection and usage restrictions.',
+};
 
 export default function CopyrightNotice() {
   return (

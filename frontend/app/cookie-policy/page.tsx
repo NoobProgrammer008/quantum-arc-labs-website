@@ -1,5 +1,12 @@
-"use client";
+//"use client";
+import { Metadata } from "next";
 import React from "react";
+
+export const metadata: Metadata = {
+  title: 'Cookie Policy | Quantum Arc Labs',
+  description: 'Learn how Quantum Arc Labs uses cookies to improve your browsing experience and website performance.',
+};
+
 export default function CookiePolicy() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-purple-50 to-slate-50 pt-32 pb-20">

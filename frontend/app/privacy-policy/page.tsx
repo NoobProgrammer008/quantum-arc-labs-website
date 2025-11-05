@@ -1,5 +1,12 @@
-"use client";
+//"use client";
+import { Metadata } from "next";
 import React from "react";
+
+export const metadata: Metadata = {
+  title: 'Privacy Policy | Quantum Arc Labs',
+  description: 'Read our privacy policy to understand how Quantum Arc Labs collects, uses, and protects your personal information.',
+};
+
 export default function PrivacyPolicy() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-purple-50 to-slate-50 pt-32 pb-20">

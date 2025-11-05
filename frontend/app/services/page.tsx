@@ -1,5 +1,5 @@
-"use client";
-
+//"use client";
+import { Metadata } from "next";
 import React from "react";
 import Link from "next/link";
 import { Button } from "../../components/ui/button";
@@ -21,6 +21,12 @@ import {
   Laptop2,
 } from "lucide-react";
 
+
+export const metadata: Metadata = {
+  title: 'Our Services - Software Development | Quantum Arc Labs',
+  description: 'Explore our software development services: custom web applications, mobile apps, AI solutions, and cloud services. Get your free consultation today.',
+};
+
 export default function ServicesPage() {
  const services = [
   {
@@ -40,7 +46,7 @@ export default function ServicesPage() {
     icon: Workflow,
     title: "n8n Workflow Automation",
     description:
-      "Automate repetitive tasks and integrate your favorite tools using n8n — boosting productivity with no-code workflows.",
+      "Automate repetitive tasks and integrate your favorite tools using n8n - boosting productivity with no-code workflows.",
     gradient: "from-blue-500 to-cyan-500",
     features: [
       "No-code automation setup",

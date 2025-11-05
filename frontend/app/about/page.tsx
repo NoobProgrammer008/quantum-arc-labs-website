@@ -1,7 +1,8 @@
-"use client";
+//"use client";
 import React from "react";
 import Link from "next/link";
-//import { Button } from "../../components/ui/button";
+import { Metadata } from "next";
+import { Button } from "../../components/ui/button";
 import { Card, CardContent } from "../../components/ui/card";
 import {
   Target,
@@ -12,6 +13,11 @@ import {
   TrendingUp,
   Sparkles,
 } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: 'About Us - Quantum Arc Labs | Our Story & Mission',
+  description: 'Learn about Quantum Arc Labs - a growing tech startup building next-generation software. Discover our mission, vision, and values.',
+};
 
 export default function About() {
   const values = [
@@ -117,7 +123,7 @@ export default function About() {
               </h2>
               <div className="space-y-4 text-gray-600 text-lg">
                 <p>
-                  Quantum Arc Labs began with a simple mission — to bridge the gap between
+                  Quantum Arc Labs began with a simple mission - to bridge the gap between
                   ambitious ideas and powerful digital reality. What started as a small
                   vision among a few curious minds has evolved into a growing tech startup
                   building next-generation software for the modern world.
@@ -131,7 +137,7 @@ export default function About() {
                     </p>
 
                     <p>
-                      As we continue to grow, our focus remains clear — creating solutions that
+                      As we continue to grow, our focus remains clear - creating solutions that
                       inspire innovation and empower teams to do their best work with the help
                       of intelligent technology.
                       </p>
@@ -293,7 +299,7 @@ export default function About() {
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-10">
             We&apos;re a passionate group of innovators, developers, and designers
             shaping the future of digital technology. If you love creating,
-            experimenting, and building meaningful solutions — we’d love to hear
+            experimenting, and building meaningful solutions - we&apos;d love to hear
             from you.
           </p>
 
