@@ -1,4 +1,4 @@
-# 🚀 Quantum Arc Labs - Official Website
+#  Quantum Arc Labs - Official Website
 
 <div align="center">
   <img src="frontend/public/images/company-logo-2.png" alt="Quantum Arc Labs Logo" width="200"/>
@@ -12,6 +12,7 @@
     <a href="#tech-stack">Tech Stack</a> •
     <a href="#getting-started">Getting Started</a> •
     <a href="#deployment">Deployment</a> •
+    <a href="#legal">Legal</a> •
     <a href="#contact">Contact</a>
   </p>
 
@@ -36,9 +37,10 @@ The official website for Quantum Arc Labs - a cutting-edge software development 
 - ⚡ **Fast Performance** - Built with Next.js 14 for optimal speed
 - 📧 **Contact Form** - Integrated email system with auto-replies
 - 🎯 **SEO Optimized** - Meta tags and structured data for better visibility
-- 🌙 **Smooth Animations** - Engaging user experience with Framer Motion
+- 🌙 **Smooth Animations** - Engaging user experience with CSS animations
 - 🔒 **Type Safe** - Built with TypeScript for reliability
 - 🎭 **Component Library** - shadcn/ui for consistent design
+- ⚖️ **Legal Compliance** - Comprehensive legal documentation included
 
 ## 🛠️ Tech Stack
 
@@ -123,10 +125,19 @@ quantum-arc-labs-website/
 │   │   └── page.tsx          # Contact page
 │   ├── services/
 │   │   └── page.tsx          # Services page
+│   ├── privacy-policy/
+│   │   └── page.tsx          # Privacy Policy
+│   ├── terms-of-service/
+│   │   └── page.tsx          # Terms of Service
+│   ├── cookie-policy/
+│   │   └── page.tsx          # Cookie Policy
+│   ├── copyright-policy/
+│   │   └── page.tsx          # Copyright Notice
 │   ├── layout.tsx            # Root layout
 │   └── page.tsx              # Home page
 ├── components/
-│   └── ui/                   # shadcn/ui components
+│   ├── ui/                   # shadcn/ui components
+│   └── Footer.tsx            # Footer with legal links
 ├── public/
 │   ├── images/               # Static images
 │   └── logo.png              # Company logo
@@ -135,15 +146,29 @@ quantum-arc-labs-website/
 ├── package.json
 ├── tailwind.config.js
 ├── tsconfig.json
-└── README.md
+├── README.md
+├── LICENSE
+├── CONTRIBUTING.md
+├── CODE_OF_CONDUCT.md
+├── PRIVACY_POLICY.md
+├── TERMS_OF_SERVICE.md
+├── COPYRIGHT.md
+└── COOKIE_POLICY.md
 ```
 
 ## 🎨 Key Pages
 
+### Main Pages
 - **Home** (`/`) - Hero section, services overview, CTA
 - **About** (`/about`) - Company story, mission, vision, values, team culture
 - **Services** (`/services`) - Detailed service offerings
 - **Contact** (`/contact`) - Contact form with email integration
+
+### Legal Pages
+- **Privacy Policy** (`/privacy`) - GDPR-compliant data protection practices
+- **Terms of Service** (`/terms`) - User agreements and service terms
+- **Cookie Policy** (`/cookies`) - Transparent cookie usage disclosure
+- **Copyright Notice** (`/copyright`) - Intellectual property protection and trademark usage
 
 ## 📧 Contact Form Features
 
@@ -154,6 +179,46 @@ quantum-arc-labs-website/
 - Auto-reply confirmation email to user
 - Beautiful HTML email templates
 - Mobile-responsive form design
+
+## ⚖️ Legal & Compliance
+
+The website includes comprehensive legal documentation:
+
+### Privacy Policy
+- GDPR-compliant data protection
+- Information collection transparency
+- User rights and data management
+- Cookie usage disclosure
+- Contact information for data requests
+
+### Terms of Service
+- User agreements and responsibilities
+- Intellectual property rights
+- Service usage guidelines
+- Liability limitations
+- Modification rights
+
+### Cookie Policy
+- Detailed cookie usage explanation
+- Types of cookies used
+- Third-party cookies disclosure
+- Cookie management instructions
+- Browser-specific settings guide
+
+### Copyright Notice
+- **Logo and trademark protection**
+- Clear prohibited uses with enforcement
+- Permission request process
+- DMCA takedown procedures
+- International protection coverage
+- Violation reporting system
+
+All legal pages feature:
+- ✅ Professional design matching brand identity
+- ✅ Mobile-responsive layouts
+- ✅ Easy footer access on every page
+- ✅ Automatic date updates
+- ✅ Clear contact information
 
 ## 🚢 Deployment
 
@@ -221,7 +286,20 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduc
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+**Copyright © 2024 Quantum Arc Labs. All Rights Reserved.**
+
+This is proprietary software. The code in this repository is the exclusive property of Quantum Arc Labs and is protected by United States and international copyright laws.
+
+**This is NOT open source software.** Unauthorized copying, modification, distribution, or use of this code is strictly prohibited and may result in:
+- Cease and desist notices
+- Legal action for copyright infringement
+- Monetary damages and recovery of legal fees
+
+The display of this code is for portfolio and demonstration purposes only and does not grant any license to use, copy, modify, or distribute.
+
+For licensing inquiries or permission requests, contact: **quantumarc.labs@gmail.com**
+
+See [COPYRIGHT.md](COPYRIGHT.md) for complete details on intellectual property protection and trademark usage.
 
 ## 👥 Team
 
@@ -245,9 +323,18 @@ If you have any questions or need help, please:
 - Email us at quantumarc.labs@gmail.com
 - Visit our [website](https://quantumarclabs.com)
 
+## 📚 Additional Documentation
+
+- [Privacy Policy](PRIVACY_POLICY.md)
+- [Terms of Service](TERMS_OF_SERVICE.md)
+- [Cookie Policy](COOKIE_POLICY.md)
+- [Copyright Notice](COPYRIGHT.md)
+- [Contributing Guidelines](CONTRIBUTING.md)
+- [Code of Conduct](CODE_OF_CONDUCT.md)
+
 ---
 
 <div align="center">
-  <p>Made with ❤️ by Quantum Arc Labs</p>
-  <p>© 2024 Quantum Arc Labs. All rights reserved.</p>
+  <p>© 2025 Quantum Arc Labs. All Rights Reserved.</p>
+  <p><em>Unauthorized use is strictly prohibited.</em></p>
 </div>
