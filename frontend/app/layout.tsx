@@ -331,7 +331,12 @@ export const metadata: Metadata = {
     siteName: "Quantum Arc Labs",
     title: "Quantum Arc Labs - Building the Future of Software",
     description: "Leading software development company",
-    images: ["/images/logo2-white-bg.png"],
+    images: ["/images/company-logo-2.png"],
+  },
+    icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
   },
 };
 
